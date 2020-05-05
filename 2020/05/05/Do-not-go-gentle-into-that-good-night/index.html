@@ -167,24 +167,19 @@
 	
 	<!-- gitalk start -->
 	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
 	<div id="gitalk-container"></div>
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 	<script type="text/javascript">
 		var gitalk = new Gitalk({
 			clientID: '6a3bfced9fed2761536e',
 			clientSecret: '4771b2b0583e0359a1e2af05d70721a77fbcdc66',
+			id: window.location.pathname,
 			repo: 'PageHexoComments',
 			owner: 'jiangfengringo',
-			admin: [&#39;jiangfengringo&#39;],
-			id: location.pathname,
-			labels: [&#39;Gitalk&#39;],
-			perPage: 15,
-			pagerDirection: 'last',
-			distractionFreeMode: false
+			admin: 'jiangfengringo'
 		})
-
-    gitalk.render('gitalk-container')
+		gitalk.render('gitalk-container')
+	</script>
     </script>
 	<!-- gitalk end -->
 	
@@ -249,8 +244,8 @@
 	      &copy; 2020 IKEOVE All Rights Reserved.
         
             <span id="busuanzi_container_site_uv">
-              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
-              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+              This site has been load by <span id="busuanzi_value_site_uv"></span> person,  
+              The total number of visits is <span id="busuanzi_value_site_pv"></span>.
             </span>
           
       </div>
@@ -276,9 +271,6 @@
     
 </script>
     
-<div style="display: none;">
-  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-</div>
 
 <!-- mathjax config similar to math.stackexchange -->
 
