@@ -4,23 +4,23 @@
   
     
     <entry>
-      <title>Do not go gentle into that good night</title>
-      <link href="/2020/05/05/Do-not-go-gentle-into-that-good-night/"/>
-      <url>/2020/05/05/Do-not-go-gentle-into-that-good-night/</url>
+      <title>Map of CS -001</title>
+      <link href="/2020/03/01/Map-of-CS-001/"/>
+      <url>/2020/03/01/Map-of-CS-001/</url>
       
-        <content type="html"><![CDATA[<h2 id="Dylan-Thomas"><a href="#Dylan-Thomas" class="headerlink" title="Dylan Thomas"></a>Dylan Thomas</h2><p>Do not go gentle into that good night,<br>Old age should burn and rave at close of day,<br>Rage, rage against the dying of the light.</p><p>Though wise men at their end know dark is right,<br>Because their words had forked no lightning they,<br>Do not go gentle into that good night.</p><p>Good men, the last wave by, crying how bright,<br>Their frail deeds might have danced in a green bay,<br>Rage, rage against the dying of the light.</p><p>Wild men who caught and sang the sun in flight,<br>And learn, too late, they grieved it on its way,<br>Do not go gentle into that good night.</p><p>Grave men, near death, who see with blinding sight,<br>Blind eyes could blaze like meteors and be gay,<br>Rage, rage against the dying of the light.</p><p>And you, my father, there on the sad height,<br>Curse, bless, me now with your fierce tears, I pray.<br>Do not go gentle into that good night.<br>Rage, rage against the dying of the light.</p>]]></content>
+        <content type="html"><![CDATA[<p>Of five basic courses of computer science, most hard understanding for me is operate system of computer. It is not pure logical stuff but contains some of physical, jump from physical to logical always make me puzzle, and Principles of computer composition too.</p><a id="more"></a><p>Compare with them, it is easier to me that data structure, Microcomputer principle and computer network, because of they are only point to one side, physical or logical. I am stall in complex of logical and physical so long, so that I want to detach them and refactoring the structure.</p><p>First I list key point of them and illustrate it. Then, blending similar technique to one, marking its facility, let logical be logical, let physical be physical. And descript how an order to work, what event it will encounter and where it will travel.</p><p>From a simple Von Neumann’s machine to a complete modern computer, update hardware and upgrade software strategy, that make calculate faster.</p><p>ATTACHMENT: <a href="/link_source/CSmap.vsd">CSMap</a></p>]]></content>
       
       
       <categories>
           
-          <category> art </category>
+          <category> creature </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> poem </tag>
+            <tag> FoCS </tag>
             
         </tags>
       
@@ -29,13 +29,100 @@
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2020/05/03/hello-world/"/>
-      <url>/2020/05/03/hello-world/</url>
+      <title>杀死伊朗最高将领不会让美伊四十多年的战争停止</title>
+      <link href="/2020/01/05/%E6%9D%80%E6%AD%BB%E4%BC%8A%E6%9C%97%E6%9C%80%E9%AB%98%E5%B0%86%E9%A2%86%E4%B8%8D%E4%BC%9A%E8%AE%A9%E7%BE%8E%E4%BC%8A%E5%9B%9B%E5%8D%81%E5%A4%9A%E5%B9%B4%E7%9A%84%E6%88%98%E4%BA%89%E5%81%9C%E6%AD%A2/"/>
+      <url>/2020/01/05/%E6%9D%80%E6%AD%BB%E4%BC%8A%E6%9C%97%E6%9C%80%E9%AB%98%E5%B0%86%E9%A2%86%E4%B8%8D%E4%BC%9A%E8%AE%A9%E7%BE%8E%E4%BC%8A%E5%9B%9B%E5%8D%81%E5%A4%9A%E5%B9%B4%E7%9A%84%E6%88%98%E4%BA%89%E5%81%9C%E6%AD%A2/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>CNN 2020/01/05 , <a href="https://www.cnn.com/2020/01/05/opinions/us-iran-history-ware-intl/index.html" target="_blank" rel="noopener">Original link</a></p></blockquote><a id="more"></a><p>作者：迈克尔·威尔</p><p>迈克尔·威尔是前时代杂志和CNN驻巴格达通讯记者在2003-2009</p><p>######哈梅内伊的顾问：伊朗将会回敬美国以军事行动</p><p>美国总统特朗普说他下令执行周五对伊朗最高将领卡西姆·苏莱曼尼的暗杀行动是为了“止战”，这显然是无稽之谈。</p><p>战争并未停止，特朗普却称之为是德黑兰的虚张声势，同时孤注一掷于数年来日益激烈的冲突中美国最大胆的一次行动。</p><p>从未有过美国总统如此这般的对德黑兰进行战斗，胆大妄为且充满挑衅意味，这可能会令中东局势再度紧张，但绝不会制止战争。</p><p>#######长达几十年的战争</p><p>为什么战争不会停止？因为美伊之间的战争已经打了40多年，</p><p>这不是什么秘密，仅仅只是大多数美国人不知道他们正处在与伊朗的战争中，他们看不到战争，自然也就不认为战争正在发生。</p><p>周五的无人机打击干掉苏莱曼尼不过是世代交替中过度磨损，蜿蜒漫长的杀人冲突道路上的又一次颠簸而已。</p><p>战争起源故事需要追溯到1953年，那时伊朗人相信美国是真的主动挑起这场战争。</p><p>在1953年，美国在伊朗导演了一场政变，让一位受欢迎的，世俗化的且民族主义的总理下台，却让沙阿这位放纵的君主掌权。</p><p>正是美国发动的政变导致了1979年的革命，使阿亚图拉登上王位，到今天毛拉的统治依旧持续，正是刚刚死亡的苏莱曼尼将军效命的那一位毛拉。</p><p>当伊朗人叛乱对抗沙阿时，叛军攻克了在德黑兰的美国大使馆，抓获了许多美国外交官和海军陆战队员作为人质，并在国际电视台中展示他们，一如好莱坞在2012年拍摄的电影“逃离德黑兰”中表现的那样。</p><p>从那时起战争便开始了，而不是从这周的无人机打击开始。</p><p>在1983年，伊朗炸毁了美国驻贝鲁特大使馆内的一个海军陆战队的营房，杀死了数十人。</p><p>总统罗纳德·里根放弃了黎巴嫩，这显示伊朗已将美国赶出了此地区。</p><p>同年，一位名叫阿布·马赫迪·穆汉迪斯的伊拉克男子驾驶汽车炸毁了美国驻科威特大使馆。</p><p>尽管当时他在伊朗的帮助下脱逃，但在科威特对于爆炸案的审判中因缺席而被判处死刑，据信他随后继续参与了劫持客机。</p><p>西方情报机构也指控他涉及1984年的科威特客机劫案以及试图暗杀一位科威特王子。</p><p>你想知道周五无人机导弹打击时谁在苏莱曼尼将军的护卫队里吗？正是那位汽车爆炸者穆汉迪斯。</p><p>穆汉迪斯，又称为贾迈勒·贾法尔·穆罕默德，曾两次当选独裁者萨达姆·侯赛因倒台后由美国创建的民主伊拉克议会议员。</p><p>在伊拉克他是苏莱曼尼麾下的头号人物，身处议会，就在美国军队的鼻子底下。</p><p>CNN透露了穆汉迪斯的身份，一无所知的美国政府一开始却不相信CNN。</p><p>但当美国政府调查并确认他们大使馆爆炸者的确在议会时，穆汉迪斯已经逃离巴格达边境前往伊朗。</p><p>穆汉迪斯于周五在伊拉克这个几乎完全被一位伊朗将军操控的国家的巴格达机场迎接苏莱曼尼。</p><p>苏莱曼尼的飞机刚刚降落，他与在护卫队中的穆汉迪斯一起准备离开机场时就被无人机攻击，双双殒命。</p><p>######一个屠夫，而不是一名恐怖分子</p><p>毫无疑问，苏莱曼尼是一个屠夫，一名精于算计，耐心且复杂的杀手，不容辩驳地，他策划了许多美国人的死亡。</p><p>但是，不管特朗普总统怎么说，苏莱曼尼不是一名恐怖分子。他赞助，训练，武装了恐怖分子。但苏莱曼尼从本质来说是个军人。</p><p>他经历过二十世纪八十年代两伊战争的残酷。这是一战的现代化版本，化学武器攻击，自杀式的人潮攻击，以及一场我们再也不希望在这个世界上看到的杀戮事件。</p><p>苏莱曼尼在军队中步步高升，直到他成为即使不是整个世界，也无疑是这个地区最精锐的特种部队武装的首领，这支部队被称为圣城部队，也被翻译为耶路撒冷部队。</p><p>伊朗包含海军和空军力量一共有两支军队。一个用于保卫国家，另一个，伊朗革命卫队（IRGC），则用于保卫这个国家的宗教革命。</p><p>而纵观整个伊朗革命卫队，圣城部队是精英中的精英，成员掌握多种语言。</p><p>他们是间谍，战士和技术专家。在西方看来，他们是绿色贝雷帽，SAS突击队和三角洲武装部队的结合体。</p><p>而苏莱曼尼作为他们的指挥官超过20年。</p><p>他在美国人，阿拉伯人，以色列人，英国人之间游刃有余。</p><p>让我们非常非常确信的是：这个男人坚定地反对美国及其代表的一切事物。</p><p>他渴望摧毁整个以色列，使其不复存在，并且他反对当前中东的权力平衡。</p><p>他的整个一生都致力于将以色列及美国的一切毁灭。</p><p>如果你质疑苏莱曼尼的信条，他将以独特地暗杀作为回应。</p><p>华盛顿清楚他的危险性，这就是为什么特朗普总统下令无人机攻击。</p><p>苏莱曼尼为塑造及重塑该地区的格局所作的努力比任何国王，王子，苏丹，总统或总理都要多。</p><p>这个男人，无疑，是历史的力量。</p><p>他只是不与我们为友。</p><p>他的遇刺会改变伊朗的战略野心吗？不。</p><p>会让他们放缓吗？可能吧。</p>]]></content>
       
       
+      <categories>
+          
+          <category> record </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> news </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在圣诞和新年致辞中普京再度邀请特朗普访问莫斯科</title>
+      <link href="/2019/12/31/%E5%9C%A8%E5%9C%A3%E8%AF%9E%E5%92%8C%E6%96%B0%E5%B9%B4%E8%87%B4%E8%BE%9E%E4%B8%AD%E6%99%AE%E4%BA%AC%E5%86%8D%E5%BA%A6%E9%82%80%E8%AF%B7%E7%89%B9%E6%9C%97%E6%99%AE%E8%AE%BF%E9%97%AE%E8%8E%AB%E6%96%AF%E7%A7%91/"/>
+      <url>/2019/12/31/%E5%9C%A8%E5%9C%A3%E8%AF%9E%E5%92%8C%E6%96%B0%E5%B9%B4%E8%87%B4%E8%BE%9E%E4%B8%AD%E6%99%AE%E4%BA%AC%E5%86%8D%E5%BA%A6%E9%82%80%E8%AF%B7%E7%89%B9%E6%9C%97%E6%99%AE%E8%AE%BF%E9%97%AE%E8%8E%AB%E6%96%AF%E7%A7%91/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>CNN 2019/12/31 , <a href="https://www.cnn.com/2019/12/30/politics/putin-trump-christmas-message-moscow-invite/index.html" target="_blank" rel="noopener">Original link</a></p></blockquote><a id="more"></a><p>华盛顿消息—周一克里姆宫一则普京对外国领导人的假日问候的发言稿发布，俄罗斯总理弗拉基米尔·普京再度邀请美国总统唐纳德·特朗普来年访问莫斯科。</p><p>“在对美利坚合众国总统唐纳德·特朗普的圣诞和新年问候中，弗拉基米尔·普京指出俄罗斯和美国对确保全球安全稳定负有历史性的责任，莫斯科支持双边关系正常化和展开基于共同利益前景的平等对话交流，”发言稿提到，“俄国总理再一次邀请唐纳德·特朗普访问莫斯科，参加伟大卫国战争胜利75周年庆典。”</p><p>周日克里姆宫发布了一篇特朗普和普京在一次通话中讨论了共同利益问题和继续双边合作打击恐怖主义达成一致的特别报道之后，普京的善意和邀请如约而至。</p><p>这则由俄罗斯发起的通话是七月以来普京和特朗普的首次交流，克里姆宫关于这则通话的报道中指出：“弗拉基米尔·普京感谢唐纳德·特朗普通过特殊的渠道共享信息为阻止在俄罗斯的恐怖活动提供了帮助。”但并未言及美国提供的是何种信息的额外细节。</p><p>俄罗斯联邦安全局发布的一份声明中表示，在美国提供的信息帮助下于周五被拘捕的两名俄国公民，计划在新年前夕对圣彼得堡实行恐怖袭击。</p><p>白宫在周一发布的关于这则通话的发言稿中指出，普京为美国提供的信息帮助阻止了在俄罗斯的一次潜在的节日恐怖袭击而向特朗普表示感谢。</p><p>“两位领导人就两个国家的长期反恐合作已达成一致，”白宫发言人霍根·吉德利在一次声明中指出，“就两国关系状态以及未来支持大规模杀伤性武器管控的方案双方同样展开了讨论。”</p><p>自特朗普上任以来他和普京之间异乎寻常的友谊就成为严格审查的重点，去年，当他拒绝承认美国政府对于俄罗斯干涉2016年美国总统大选的指证并且再三驳回普京对反对者实行暴力镇压行为的可信指控时，就被视为普京盟友。</p><p>11月，特朗普说他曾考虑接受普京的邀请参加胜利日游行，这是莫斯科在五月初举办的被视为在二战期间盟军战胜纳粹的胜利纪念日中展示俄罗斯军事力量的庆典。</p><p>“我被邀请了，我正在考虑，正处于我们竞选季的中期，但是我真的有认真的考虑要不要去参加，”特朗普当时说。</p><p>“普京总理邀请了我，这是件大事，庆祝战争的结束，所以我很荣幸收到这份邀请，”他补充道，“有机会的话我很乐意去。”</p><p>上一次美国总统访问俄罗斯是在2013年，时任总统巴拉克·奥巴马参加在圣彼得堡举办的G20经济峰会，前任总统乔治·布什参加了2005年举办的纪念战胜纳粹60周年胜利纪念日上的游行。</p><p>2020年五月的游行会在75周年纪念日举办。1995年，时任总统比尔·克林顿去俄罗斯参见了胜利日庆典，为了抗议俄罗斯在车臣事件中使用武力，克林顿和世界其他国领导人抵制莫斯科阅兵，之后他参加了没有军事装备出场的红场游行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> record </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> news </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>弹劾永远的改变了特朗普的政治遗产</title>
+      <link href="/2019/12/19/%E5%BC%B9%E5%8A%BE%E6%B0%B8%E8%BF%9C%E7%9A%84%E6%94%B9%E5%8F%98%E4%BA%86%E7%89%B9%E6%9C%97%E6%99%AE%E7%9A%84%E6%94%BF%E6%B2%BB%E9%81%97%E4%BA%A7/"/>
+      <url>/2019/12/19/%E5%BC%B9%E5%8A%BE%E6%B0%B8%E8%BF%9C%E7%9A%84%E6%94%B9%E5%8F%98%E4%BA%86%E7%89%B9%E6%9C%97%E6%99%AE%E7%9A%84%E6%94%BF%E6%B2%BB%E9%81%97%E4%BA%A7/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>AP NEWS 2019/12/19 , <a href="https://apnews.com/4b18beea4e33c5644d2ea483f843bdef?fbclid=IwAR0KwLYL3bAQapg9BO7gwO6YaxmtFHmCT51sCTGYW_pGyRb2Ns2auv1LIcQ" target="_blank" rel="noopener">Original link</a></p></blockquote><a id="more"></a><p><strong>总统特朗普讣告的第一笔已经被写下</strong></p><p>虽然特朗普几乎确定会避免被罢免，但是在周三他成为美国历史上第三位被众议院弹劾的总统已经变成他政治遗产的一部分。</p><p>周三通过的两条符合党派立场的弹劾条款作为一种宪法性的斥责将始终与特朗普同在，尽管他试图去消解条款的含义并且利用它们去增加他的连任筹码。</p><p>“回顾这一任期不讨论弹劾是不可能的，这将和特朗普的记录永久相连，”普林斯顿大学总统历史学者朱利安·泽莱泽说，“如今特朗普成为滥用总统权力话题的一部分，乌克兰将成为他的水门，他的莱文斯基。”</p><p>【注：尼克松的水门窃听事件，克林顿与白宫实习生莱文斯基的性爱事件】</p><p>史书同样会把特朗普加入到这一章节，记录了距今21年前的比尔·克林顿因在与白宫实习生莫妮卡·莱文斯基的性爱事件的宣誓中撒谎而被弹劾，和151年前的安德鲁·约翰逊在重建中对抗国会而被弹劾，以及理查德·尼克松在水门事件调查中为避免被弹劾而辞职。</p><p>特朗普本人非常清楚弹劾可能会对他的政治遗产造成的影响。</p><p>近几个月来，其盟友描述特朗普对这一前景的愤怒，认为弹劾被更多的作为人身攻击和一种使其任期失去合法性的尝试而不是针对于其行为的评判。周二，特朗普表示他对于将到来的弹劾负有“零”责任。</p><p>“很少有身居高位的人可以忍受或通过这种考验，”在弹劾前夜特朗普写给众议院议长南希·佩罗西一封长达6页言词激烈的信中他写道，“你既不了解也毫不关心，这种强加在我优秀的和亲爱的家人身上的伤害和痛苦。”</p><p>这封信伴随着众多的感叹号，随意的大写，大量的委屈，将总统描绘为一个遭受不公平和包含政治动机的攻击的受害者。</p><p>“百年以后，当人们回顾这场事件时，我希望他们能理解并从中汲取教训，以免这一事件在其他总统身上再度发生。”特朗普写道。</p><p>由于共和党掌控着参议院，特朗普在明年一月的审判中无疑会被无罪开释。</p><p>特朗普确信一场针对弹劾的大众反馈或许能通过激发忠诚的支持者以及吸引更多的独立人士加入他的阵营从而在政治上有帮助，他谋划着举办一场判决胜利后的巡回，一场名副其实的“无罪之旅”，类似于他在2016年总统过渡时期导演的”感谢之旅“。</p><p>总统历史学者乔恩·米奇姆表示弹劾将会使特朗普成为“美国历史上第一位叛乱的在任总统”，他比较了当前的反身性党派之争和19世纪围绕在乔纳森和重建周围的部落主义，要求一个分裂的国家“去评估说的是什么而不是简单的致敬说这话的人”。</p><p>唯一能引起注意的是，特朗普对于被接纳的共和党保持了影响力，并重塑了共和党的形象，尽管同时也在对抗着政党正统。他通过他对抗性的风格和强硬的言辞使得他的基础支持者们兴奋不已，使用他好战性的推特账号去同政治反对者们战斗并且对于一开始关于外国干涉选举的指控而对特别顾问罗伯特·穆勒的俄罗斯调查进行了抗议。</p><p>尽管特朗普在没有发生权力更迭的情况下逃过了那一幕，但乌克兰事件的速度令白宫震惊以至于淹没了华盛顿，特朗普以相同的战略回应–否认，拖延，谴责–但依旧无法避免一个掌控在民主党之手的众议院的弹劾调查。</p><p>周三总统高级顾问凯莉安·康韦反驳了那些特朗普相信他的政治遗产会因弹劾而被玷污的说法。</p><p>“不，他没有，”康韦说，“特朗普将弹劾视之为那些专心且恶毒的想要将他赶下台的人的政治遗产的污点。”</p><p>克林顿为他的行为道歉，尼克松退位，但特朗普依旧未屈服，坚持他与乌克兰总统有一通“完美”的通话的说法，特朗普同许多他的共和党支持者们驳斥了一群政府证人的证词，这些人证实特朗普在努力推动基辅去调查其潜在的总统选举对手乔·拜登。</p><p>在密歇根的一场集会上，众议院开始它的历史性投票开始的几分钟，特朗普尝试公开淡化他记录上的污点。</p><p>“这是一场劣质弹劾，与理查德·尼克松一起，我能看到它作为一个非常黑暗的时代，”特朗普说，“我不知道你，但我很开心，而且我也知道在共和党中我们有一大群人的支持。”</p><p>总统支持率在弹劾调查期间大体上没有变化，他好斗的个性和民粹主义帮助他稳固对支持者的把握。</p><p>极度分化环绕在弹劾周围并不新奇，但是这次激烈的党派纷争因这一时刻独特的方面而加剧：特朗普追求连任，但克林顿和尼克松当他们面对弹劾的威胁的时候都中断了第二任期。</p><p>选举的结果可能决定最终历史会如何记住发生在特朗普身上的这次弹劾。</p><p>“唐纳德·特朗普如今成了弹劾的代名词，没有办法将之视之为荣耀奖章，它是一枚耻辱的徽章，”莱斯大学总统历史学者道格拉斯·布林克利说，</p><p>“但是如果他赢了，弹劾将不再重要，这意味着特朗普藐视弹劾，并且用他自己的形象重铸了现代共和党，同时保持了他们的忠诚。”</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> record </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> news </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Do not go gentle into that good night</title>
+      <link href="/2019/11/18/Do-not-go-gentle-into-that-good-night/"/>
+      <url>/2019/11/18/Do-not-go-gentle-into-that-good-night/</url>
+      
+        <content type="html"><![CDATA[<p><strong>Dylan Thomas</strong></p><a id="more"></a><p>Do not go gentle into that good night,<br>Old age should burn and rave at close of day,<br>Rage, rage against the dying of the light.</p><p>Though wise men at their end know dark is right,<br>Because their words had forked no lightning they,<br>Do not go gentle into that good night.</p><p>Good men, the last wave by, crying how bright,<br>Their frail deeds might have danced in a green bay,<br>Rage, rage against the dying of the light.</p><p>Wild men who caught and sang the sun in flight,<br>And learn, too late, they grieved it on its way,<br>Do not go gentle into that good night.</p><p>Grave men, near death, who see with blinding sight,<br>Blind eyes could blaze like meteors and be gay,<br>Rage, rage against the dying of the light.</p><p>And you, my father, there on the sad height,<br>Curse, bless, me now with your fierce tears, I pray.<br>Do not go gentle into that good night.<br>Rage, rage against the dying of the light.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> record </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> arts </tag>
+            
+        </tags>
       
     </entry>
     
