@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>faceswap提取：一种工作流程 | IKEOVE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="tool" />
+  
+  
+  
+  
+  <meta name="description" content="内容： 介绍 为什么要提取？ 校准文件   提取 分类 清理校准文件 手动修正校准 启动手动工具 转换时手动修正 训练集手动修正   从校准文件中提取训练集 合并人脸数据集进行训练">
+<meta property="og:type" content="article">
+<meta property="og:title" content="faceswap提取：一种工作流程">
+<meta property="og:url" content="http://yoursite.com/2020/03/30/faceswap%E6%8F%90%E5%8F%96%EF%BC%9A%E4%B8%80%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/">
+<meta property="og:site_name" content="IKEOVE">
+<meta property="og:description" content="内容： 介绍 为什么要提取？ 校准文件   提取 分类 清理校准文件 手动修正校准 启动手动工具 转换时手动修正 训练集手动修正   从校准文件中提取训练集 合并人脸数据集进行训练">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-30T12:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-30T12:00:00.000Z">
+<meta property="article:author" content="Ringo Hu">
+<meta property="article:tag" content="tool">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="IKEOVE" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="IKEOVE" rel="home"> IKEOVE </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Like LiKe, Like like LIKE</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-faceswap提取：一种工作流程" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      faceswap提取：一种工作流程
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/03/30/faceswap%E6%8F%90%E5%8F%96%EF%BC%9A%E4%B8%80%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/" class="article-date">
+	  <time datetime="2020-03-30T12:00:00.000Z" itemprop="datePublished">March 30, 2020</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  This post has been read by<span id="busuanzi_value_page_pv"></span> person
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="内容："><a href="#内容：" class="headerlink" title="内容："></a>内容：</h4><ul>
+<li>介绍</li>
+<li>为什么要提取？<ul>
+<li>校准文件</li>
+</ul>
+</li>
+<li>提取</li>
+<li>分类</li>
+<li>清理校准文件</li>
+<li>手动修正校准<ul>
+<li>启动手动工具</li>
+<li>转换时手动修正</li>
+<li>训练集手动修正</li>
+</ul>
+</li>
+<li>从校准文件中提取训练集</li>
+<li>合并人脸数据集进行训练<a id="more"></a>
+
+</li>
+</ul>
+<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>很多人在开始换脸时总是不知所措，会犯下很多错误。犯错误是好事。这是我们的学习方式，错误有时能帮助我们在还没有深入研究之前更加有效的理解中间所涉及的过程。</p>
+<p>这里我会详细介绍提取的工作流程。我没有说这种流程时最好的，也没有强迫你一定要这么做，只是这种流程适合我，也希望能提供一个对创造你自己的工作流程有帮助的起跳点。</p>
+<p>在这篇教程中我会使用GUI模式，但理论流程和使用命令行模式是完全相同的（所有GUI上有的选项同样在命令行模式下可用）。</p>
+<h4 id="为什么要提取？"><a href="#为什么要提取？" class="headerlink" title="为什么要提取？"></a>为什么要提取？</h4><p>从最高层面来看，提取包含有三个阶段：</p>
+<p><strong>检测</strong>，<strong>校准</strong>和<strong>面罩生成</strong>。每个过程都有很多插件可以实现，这些插件的详细优缺点可以在tooltips（GUI模式）或者帮助文本（命令行模式）中查看，所以我不会去详述细节。然而，检测是用一个方框去发现人脸的过程，校准是从人脸中寻找“地标”并保持人脸正向。最后的面罩生成则是创建一个“面罩”，去识别最终的人脸图像中哪些是人脸，哪些是背景或障碍物。</p>
+<p>提取是为了两个主要目的：</p>
+<ol>
+<li>为训练模型生成一组人脸（faces）数据集，以及可选的校准（alignment）文件和面罩（mask）。</li>
+<li>为你的最终图片（frames）转换生成校准文件和面罩。</li>
+</ol>
+<p>技术上来讲的第三个目的则是，当你在为了转换而提取的同时，部分人脸也会用于训练，这些我之后会介绍。</p>
+<p>尽管在转换时（只需要校准文件）不需要这些提取出来的人脸数据，但获取它们依旧是有用的，这可以为转换过程清理我们的数据集。</p>
+<h5 id="校准文件"><a href="#校准文件" class="headerlink" title="校准文件"></a>校准文件</h5><p>校准文件拥有在每一张图片中找到的所有人脸的信息，尤其是脸在哪里，以及68个点地标在哪里。</p>
+<p>它同样存储了每一张脸在提取过程中生成的所有面罩。</p>
+<p>校准文件的目的分三个方面：</p>
+<ol>
+<li>训练：如果“Warp to Landmarks”有效的话，它将提供人脸地标。</li>
+<li>转换：它告诉转换程序在原始图片中需要被替换的人脸位于何处。</li>
+<li>训练和转化：它存储的所有面罩可能会被用于这些过程。</li>
+</ol>
+<p>现在我们知道了为什么我们需要提取人脸，那么我们该如何建立一个好的工作流程呢？</p>
+<h4 id="提取"><a href="#提取" class="headerlink" title="提取"></a>提取</h4><p>第一步，无论你创建人脸数据集的原因是什么，实际上都是要从图片中提取人脸数据。</p>
+<ul>
+<li><p>Data</p>
+<ul>
+<li>这是设置输入视频或图片集，以及输出路径的地方。</li>
+<li>Input Dir<ul>
+<li>首先我们需要资源。这里能选择一个视频文件或一个包含图片集的文件夹。</li>
+</ul>
+</li>
+<li>Output Dir<ul>
+<li>接着我们需要告知程序将提取出来的人脸数据放在何处。点击文件夹图标设置输出路径。</li>
+</ul>
+</li>
+<li>我忽略了下面的一些选项，所以你或许也应该如此，但下面会逐一介绍它们：<ul>
+<li>Alignments<ul>
+<li>这个选项是为了万一你想特别指定一个不同的名字或路径来保存校准文件而设置的。留空是最简单的，以便让程序将校准文件保存在默认路径（即资源图片或视频的存放路径）。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Plugins</p>
+<ul>
+<li>插件用于初次从图像中检测人脸，读取人脸地标以对齐图像，以及使用多种遮面方式创建一个面罩。</li>
+<li>Detector, Aligner<ul>
+<li>选择一个你想使用的。在本文编写的时候（2019/07/20）最好的探测器是S3FD，最好的校准器是FAN。</li>
+</ul>
+</li>
+<li>Masker<ul>
+<li>选择一个你想使用的遮面器。它们各有优缺点，如果你希望使用一个面罩来训练或转换你的图片（推荐），那么你需要在此选择一个面罩。</li>
+<li><strong>提示</strong>：面罩是一个新增选项，所以尚没有足够的信息来判断哪一个最好。你可以在提取过程中只建立一个面罩，也可以选择建立多个面罩，或者往已存在的校准文件中新添加面罩，同时使用面罩工具生成预览。</li>
+<li>None<ul>
+<li>不创建面罩</li>
+</ul>
+</li>
+<li>Components<ul>
+<li>通过在校准阶段找到的68个点地标来生成面罩。这是基于人脸边缘环绕点建立的多部分面罩。</li>
+</ul>
+</li>
+<li>Extended<ul>
+<li>Components面罩最主要的问题是它会以眉毛作为人脸上界。Extended面罩基于Components面罩，但它尝试将额头包含进来以避免“双重眉毛”的问题（替代人脸和被替代人脸的眉毛都会在最终成像中显示）。</li>
+</ul>
+</li>
+<li>Unet-DFL<ul>
+<li>一种基于神经网络的面罩用于对大部分正面人脸进行智能分割。该模型已被社区成员做过训练。</li>
+</ul>
+</li>
+<li>VGG-Clear<ul>
+<li>一种基于神经网络的面罩用于对大部分没有遮挡物的正面人脸进行智能分割。</li>
+</ul>
+</li>
+<li>VGG-Obstructed<ul>
+<li>用于对大部分正面人脸进行智能分割。这种面罩模型被专门训练用于识别有一些人脸障碍物的人脸（手或者眼镜）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Normalization<ul>
+<li>处理复杂光源条件下的图片以便提取器能更好的检测人脸。不同的的数据集有不同的正规化方法，但我发现“hist”是最全能的。这会略微降低提取速度，但能进行更好的校准。</li>
+</ul>
+</li>
+<li>下面的一些选项也可以忽略，但我同样会介绍它们的作用以便你能做出自己的选择。<ul>
+<li>Rotate Images<ul>
+<li>这个选项除了CV2-DNN探测器可能会用到之外，对于其他可选的探测器来说都是完全不需要的。当前的探测器都可以完美处理任意方向上的人脸检测，所以这个功能只会拖慢你的进程而不会有太大的收获。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Face Processing</p>
+<ul>
+<li>在此处设置人脸过滤和选择的选项。</li>
+<li>Min-size<ul>
+<li>我通常将此设置为一个大于零的较小值，去过滤那些显然太小而无法构成人脸的东西。然而这取决于输入图片的尺寸以及图片中人脸的尺寸。</li>
+</ul>
+</li>
+<li>我忽略了下面的一些选项，理由如之前一样，但是你可以自己选择。下面会逐一对其做出介绍：<ul>
+<li>Filter/nFilter, Ref Threshold<ul>
+<li>这些选项是为了过滤掉不想要的人脸。我没有使用它而是宁愿在下一步中自己手动操作，与使用机器过滤相比手动操作往往更加有效，而且也花不了多少时间，但如果使用机器过滤则会大大拖慢提取的速度。    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Output</p>
+<ul>
+<li>设置人脸数据输出选项。</li>
+<li>Extract Every N<ul>
+<li>这是第一个选项，根据你提取的目的做修改。</li>
+<li>如果你提取用于转换，或者用于转换的同时部分人脸数据也用于训练，那么设置为1（每一图片都提取）。</li>
+<li>如果你提取只用于训练，那么请设置为一个相应合理的值，这将取决于你每秒输入多少图片。相应的，若输入为25fps的视频，那么合理的值应在12-25之间（每半秒到一秒之间），如果少于这个范围，那么你可能最终会得到大量的相似人脸图片。你要从你的训练集中提取多少资源，你的最终训练集中要有多少人脸数据，以及你的源视频有多长，这些都是要考虑到的。最终的值要依具体情况而定。</li>
+</ul>
+</li>
+<li>同样的，下面的一些选项我依旧跳过，但介绍如下：<ul>
+<li>Size<ul>
+<li>这是提取出来的人脸图片的尺寸。当前没有模型支持256px以上大小，所以设置默认即可。</li>
+</ul>
+</li>
+<li>Save interval<ul>
+<li>我没修改过它，但你也可以有自己的选择。</li>
+</ul>
+</li>
+<li>Debug Landmarks<ul>
+<li>在人脸上绘制地标，仅用于调试目的。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Run</p>
+<ul>
+<li>现在我们已经准备好检查之前的设定并开始进行提取了。</li>
+<li>点击Extract，等待提取完成，相应的校准文件也会生成。</li>
+</ul>
+</li>
+</ul>
+<h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><p>现在我们已经提取完人脸数据了，接着需要清理数据集和校准文件。提取器准确的抓取了人脸，但它不是完美的，也会有一些错误，有些人脸没有被校准，也有一些人脸不是我们想替换的，在你的输出文件夹中你会找到许多这样不准确的人脸数据。</p>
+<p>清理看起来是件麻烦事。但好在我们可以让事情变得容易起来。清理数据集最快和最简单的方法就是将这些人脸数据有效分类，然后删除掉我们不需要的那些。一定程度上来讲最好的分类方式就是“按脸分类”。</p>
+<p>注意：按脸分类是受RAM限制的，它需要做大量的计算。我曾经尝试过在8G RAM上成功分类22K张人脸数据。如果你不得不去分类超过RAM限制的人脸数据，程序将自动切换至慢速模式，因此若你的RAM比较小，可以将数据集细分为子数据集。理论上n张图片需要(n^2×24)∕1.8大小的RAM空间，与此同时你还需要考虑到一些其他的RAM开销（如其他程序占用，图片加载到RAM中），但理论上30K张图片需要大约11G RAM。</p>
+<p>在GUI上点击“Tools”标签并进入“Sort”子标签：</p>
+<ul>
+<li><p>Data</p>
+<ul>
+<li>在分类之前，在这里我们设置之前提取出来的人脸数据集。</li>
+<li>Input<ul>
+<li>设置你之前提取出来的人脸数据存放路径。</li>
+</ul>
+</li>
+<li>Output<ul>
+<li>这里应当设置为空，我们希望在原地分类。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Sort Settings</p>
+<ul>
+<li>我们希望如何分类人脸数据</li>
+<li>Sort By<ul>
+<li>设置“Face”，你可以忽略掉这个部分的其他选项。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Output</p>
+<ul>
+<li>我们希望分类后的人脸数据如何输出</li>
+<li>Final Process<ul>
+<li>确保设置为“Rename”。</li>
+</ul>
+</li>
+<li>Keep<ul>
+<li>确保这里未勾选。你可以将其他选项都留空，它们不会对重命名任务产生任何影响。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Settings</p>
+<ul>
+<li>分类特殊设置</li>
+<li>Backend<ul>
+<li>可设置为GPU。只有当有GPU存在且当前没有其他机器学习的任务（如训练）在GPU上运行时才可用，它能加速分类。其他选项都可留空。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Run</p>
+<ul>
+<li>其他选项默认。现在我们准备好检查设置并开始执行分类了。</li>
+<li>点击Sort开始分类。</li>
+</ul>
+</li>
+</ul>
+<p>程序将通过为每一张人脸建立特征来识别它，接着将相似的人脸聚集到一起。实际的聚类过程将不得不计算大量数据，因而也会需要较长时间。由于这个过程中没有可视化反馈界面，因而需要耐心等待。</p>
+<p>一旦计算完成，你会发现99%的人脸被分到了一起，而那些无用的图片也聚集到了一块，现在你需要做的就是查找人脸数据文件夹并将那些你不想要的人脸数据删除。</p>
+<h4 id="清理校准文件"><a href="#清理校准文件" class="headerlink" title="清理校准文件"></a>清理校准文件</h4><p>现在我们删去了我们不想要的人脸数据且有了一个可用的数据集，下一步就需要清理校准文件了。为什么要这么做？这是因为那些我们不想要的人脸数据信息依旧保留在校准文件里，这些信息在后面可能会引起麻烦，使用集成的工具清理校准文件还能有额外的好处，即将人脸图片重命名为其原始文件名，这是一举两得。</p>
+<p>选择“Tools”标签然后进入“Alignments”子标签：</p>
+<ul>
+<li><p>Job</p>
+<ul>
+<li>这里是工具中所有可用的各种校准任务。</li>
+<li>选择“remove-faces”。</li>
+</ul>
+</li>
+<li><p>Data</p>
+<ul>
+<li>这些选择我们想要处理的资源的位置。</li>
+<li>Alignments File<ul>
+<li>这里选择之前提取过程中生成的校准文件，位于与提取源视频文件同一文件夹或提取输入图片文件夹里。</li>
+</ul>
+</li>
+<li>Faces Folder<ul>
+<li>选择提取过程中的人脸数据输出文件夹（也就是用于分类的文件夹）。</li>
+</ul>
+</li>
+<li>该部分其他选项留空，这里不需要设置。</li>
+</ul>
+</li>
+<li><p>Run</p>
+<ul>
+<li>其他选项默认。现在我们准备好检查设置并开始执行清理校准文件了。</li>
+<li>点击Alignments开始，等待程序完成。</li>
+</ul>
+</li>
+</ul>
+<p>完成后你的人脸图片会被重命名为提取后默认的名字，并且所有的不准确人脸数据都会从校准文件中移除。</p>
+<p>程序会备份旧的校准文件并存放在原处，且会将其重命名为已做清理的校准文件的名字后加“backup_&lt;时间戳&gt;”，若你确认新的校准文件正确无误，你大可以删除掉这个备份文件。</p>
+<p>另外，如果你为了转换而进行提取（或者这个数据是被用于转换及训练），那么你可以完全删除掉你的人脸数据文件夹，这些后面都不再需要。如果你需要重新生成你的人脸数据集，你可以通过校准工具（提取任务）来重新生成。</p>
+<h4 id="手动修正校准"><a href="#手动修正校准" class="headerlink" title="手动修正校准"></a>手动修正校准</h4><p>好了，我们提取了人脸数据，我们清理掉了所有的废物，我们就真的完成了吗？先不要急，你当然可以直接进行下一步，但是你不想得到一个好的换脸或者一个完美的换脸吗？</p>
+<p>在接下来的任务中，手动操作是有用的：</p>
+<ol>
+<li>去除一张图片中留下的“多张人脸”。</li>
+<li>为那些没有进行校准的图片添加一些校准</li>
+<li>修理错误校准图片。</li>
+</ol>
+<p>我们从数据集中提取了什么，将决定我们要在这里做什么。如果我们仅仅只是为提取一个训练集，尽管检查已存在的校准文件以确保这些面罩被正确建立是个好主意，但你也完全可以跳过全部步骤。</p>
+<p>如果是为了转换而进行提取，那么我们绝对想要最好的处理一张图片中的多个人脸，以及那些没有校准的图片，这些行为将会提高最终换脸的质量。只要你想，你可以修正任何劣质对准。</p>
+<p>我不想过于详细的介绍如何使用手动工具，这些本身也可以写一篇指南了，但在弹出的窗口中已经写好了非常直观的指导。</p>
+<h5 id="启动手动工具"><a href="#启动手动工具" class="headerlink" title="启动手动工具"></a>启动手动工具</h5><p>选择“Tools”标签然后进入“Alignments”子标签，启动手动工具。</p>
+<ul>
+<li><p>Job</p>
+<ul>
+<li>这里是工具中所有可用的各种校准任务。</li>
+<li>选择“Manual”</li>
+</ul>
+</li>
+<li><p>Data</p>
+<ul>
+<li>这些选择我们想要处理的资源的位置。</li>
+<li>Alignments File<ul>
+<li>这里选择之前最后一步清理过后生成的校准文件，位于与提取源视频文件同一文件夹或提取输入图片文件夹里。</li>
+</ul>
+</li>
+<li>Frames Folder<ul>
+<li>选择提取过程中你的输入视频或者输入图片文件夹。</li>
+</ul>
+</li>
+<li>该部分其他选项留空，这里不需要设置。</li>
+</ul>
+</li>
+<li><p>Run</p>
+<ul>
+<li>其他选项默认。现在我们准备好检查设置并开始启动手动工具了。</li>
+<li>点击Alignments启动手动工具。</li>
+<li>注意：Windows用户有时会遇到bug，手动工具开启后立即关闭。如果你遇到了这样的情况，在GUI的“Manual Tool”选项区勾选“Disable Monitor”。</li>
+</ul>
+</li>
+</ul>
+<h5 id="为转换进行手动修正"><a href="#为转换进行手动修正" class="headerlink" title="为转换进行手动修正"></a>为转换进行手动修正</h5><p><strong>注意</strong>：按“m”键进行预览和编辑模式切换。</p>
+<p>为转换进行修正我们需要处理以下情况：</p>
+<ul>
+<li><p>多张人脸</p>
+<ul>
+<li>按“s”直到跳转模式设置为“Multi-Faces”。</li>
+<li>按“x”跳到下一张包含有多张人脸的图片。</li>
+<li>点击你不想要的人脸并按“d”删除它们。</li>
+<li>继续上述行为直到所有图片修正完毕</li>
+<li>按“Space”保存你已修正的校准文件。</li>
+</ul>
+</li>
+<li><p>无脸图片</p>
+<ul>
+<li>按“{”返回第一图片。</li>
+<li>按“s”直到跳转模式设置为“no-faces”。</li>
+<li>按“x”跳到下一张无脸图片。</li>
+<li>如果你遇到一张检测为无脸图片但实际上有人脸，你可以点击人脸并用鼠标调整边界框，或者你也可以使用“c”或“v”键复制前/后图片的校准放到此图片来编辑。</li>
+<li>重复上述行为直到所有图片修正完毕</li>
+<li>按“Space”保存你已修正的校准文件。</li>
+</ul>
+</li>
+<li><p>修正校准</p>
+<ul>
+<li>按“{”返回第一图片。</li>
+<li>按“s”直到跳转模式设置为“has-faces”。</li>
+<li>按“x”跳到下一张有脸图片。</li>
+<li>如果校准看起来不正确，使用鼠标调整边界框来修正。</li>
+<li>重复上述行为直到所有图片修正完毕</li>
+<li>按“Space”保存你已修正的校准文件。</li>
+</ul>
+</li>
+</ul>
+<p>手动调节中你每次保存都会创建一个校准文件的备份，若你确定新的校准文件正确无误，可以删掉备份文件，它们位于和原始校准文件相同的文件夹。</p>
+<h5 id="为训练集进行手动修正"><a href="#为训练集进行手动修正" class="headerlink" title="为训练集进行手动修正"></a>为训练集进行手动修正</h5><p><strong>注意</strong>：按“m”键进行预览和编辑模式切换。</p>
+<p>为训练集进行修正我们需要处理以下情况：</p>
+<ul>
+<li>修正校准<ul>
+<li>按“s”直到跳转模式设置为“has-faces”。</li>
+<li>按“x”跳到下一张有脸图片。</li>
+<li>如果校准看起来不正确，使用鼠标调整边界框来修正。</li>
+<li>重复上述行为直到所有图片修正完毕</li>
+<li>按“Space”保存你已修正的校准文件。</li>
+</ul>
+</li>
+</ul>
+<p>手动调节中你每次保存都会创建一个校准文件的备份，若你确定新的校准文件正确无误，可以删掉备份文件，它们位于和原始校准文件相同的文件夹。</p>
+<p>一旦校准文件被修正，你需要重新生成你的人脸数据集。这是由于地标的移动相应的人脸图像也会改变，所以训练程序会找不到你修正后的人脸。</p>
+<p>首先删除提取时你设置的输出人脸数据文件夹，你不再需要这些了。</p>
+<p>下一步选择“Tools”标签进入“Alignments”子标签：</p>
+<ul>
+<li><p>Job</p>
+<ul>
+<li>这里是工具中所有可用的各种校准任务。</li>
+<li>选择“extract”。</li>
+</ul>
+</li>
+<li><p>Data</p>
+<ul>
+<li>这些选择我们想要处理的资源的位置。</li>
+<li>Alignments File<ul>
+<li>这里选择之前最后一步清理过后生成的校准文件，位于与提取源视频文件同一文件夹或提取输入图片文件夹里。</li>
+</ul>
+</li>
+<li>Faces Folder<ul>
+<li>选择一个空文件夹存放输出的人脸数据。</li>
+</ul>
+</li>
+<li>Frames Folder<ul>
+<li>选择提取过程中你的输入视频或者输入图片文件夹。</li>
+</ul>
+</li>
+<li>该部分其他选项留空，这里不需要设置。</li>
+</ul>
+</li>
+<li><p>Run</p>
+<ul>
+<li>其他选项默认。现在我们准备好检查设置并开始启动手动工具了。</li>
+<li>点击Alignments按钮重新提取人脸数据。</li>
+</ul>
+</li>
+</ul>
+<p>如果你打算使用面罩或者使用“Warp to Landmarks”来进行训练，那么从你的源图片路径复制校准文件到你新建的人脸数据文件夹中。</p>
+<h4 id="从校准文件中提取训练集"><a href="#从校准文件中提取训练集" class="headerlink" title="从校准文件中提取训练集"></a>从校准文件中提取训练集</h4><p>现在你已清理了你的校准文件，你可能想用其中的一些人脸数据用做训练集，操作很简单。</p>
+<p>选择“Tools”标签进入“Alignments”子标签：</p>
+<ul>
+<li><p>Job</p>
+<ul>
+<li>这里是工具中所有可用的各种校准任务。</li>
+<li>选择“extract”。</li>
+</ul>
+</li>
+<li><p>Data</p>
+<ul>
+<li>这些选择我们想要处理的资源的位置。</li>
+<li>Alignments File<ul>
+<li>这里选择之前最后一步清理过后生成的校准文件，位于与提取源视频文件同一文件夹或提取输入图片文件夹里。</li>
+</ul>
+</li>
+<li>Faces Folder<ul>
+<li>选择一个空文件夹存放输出的人脸数据。</li>
+</ul>
+</li>
+<li>Frames Folder<ul>
+<li>选择提取过程中你的输入视频或者输入图片文件夹。</li>
+</ul>
+</li>
+<li>该部分其他选项留空，这里不需要设置。</li>
+</ul>
+</li>
+<li><p>Extract</p>
+<ul>
+<li>这里设置从校准文件中提取人脸的相关选项。</li>
+<li>Extract Every N<ul>
+<li>这取决于你每秒输入多少图片。相应的，若输入为25fps的视频，那么合理的值应在12-25之间（每半秒到一秒之间），如果少于这个范围，那么你可能最终会得到大量的相似人脸图片。你要从你的训练集中提取多少资源，你的最终训练集中要有多少人脸数据，以及你的源视频有多长，这些都是要考虑到的。最终的值要依具体情况而定。</li>
+</ul>
+</li>
+<li>Size<ul>
+<li>这是提取出来的人脸图片的尺寸。当前没有模型支持256px以上大小，所以设置默认即可。</li>
+</ul>
+</li>
+<li>Align Eyes<ul>
+<li>我完全是无意间发现的这个选项，校准器已经校准了人脸，所以不再需要进一步的校准。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Run</p>
+<ul>
+<li>其他选项默认。现在我们准备好检查设置并开始从已修正的校准文件中提取训练集放入我们设定的文件夹中了。</li>
+<li>点击Alignments按钮提取人脸数据。</li>
+</ul>
+</li>
+</ul>
+<p>如果你打算使用面罩或者使用“Warp to Landmarks”来进行训练，那么从你的源图片路径复制校准文件到你新建的人脸数据文件夹中。</p>
+<h4 id="合并人脸数据集进行训练"><a href="#合并人脸数据集进行训练" class="headerlink" title="合并人脸数据集进行训练"></a>合并人脸数据集进行训练</h4><p>现在你已经得到了大量的人脸数据准备开始训练了，并且你也有了用于获取人脸数据的图片文件对应的一些校准文件。是否能够综合上述资源开始进行训练呢？当然可以。</p>
+<p><strong>预备工作</strong></p>
+<p>在合并校准文件前我们需要做一点准备工作：</p>
+<ol>
+<li>首先将你想要用于训练的人脸数据从各自的文件夹复制到一个文件夹中（我们将这个文件夹称之“training”）。</li>
+<li>将与上述人脸数据相关的一些校准文件复制到这个新的“training”文件夹中。</li>
+</ol>
+<p>现在，在GUI上，选择“Tools”标签进入“Alignments”子标签：</p>
+<ul>
+<li><p>Job</p>
+<ul>
+<li>这里是工具中所有可用的各种校准任务。</li>
+<li>选择“merge”。</li>
+</ul>
+</li>
+<li><p>Data</p>
+<ul>
+<li>这些选择我们想要处理的资源的位置。</li>
+<li>Alignments File<ul>
+<li>选择进入你的“training”文件夹，按住shift键选择所有刚刚复制过来的校准文件。</li>
+</ul>
+</li>
+<li>Faces Folder<ul>
+<li>选择放置人脸数据的“training”文件夹。</li>
+</ul>
+</li>
+<li>该部分其他选项留空，这里不需要设置。</li>
+</ul>
+</li>
+<li><p>Run</p>
+<ul>
+<li>其他选项默认。现在我们准备好检查设置并开始合并校准文件了。</li>
+<li>点击Alignments按钮合并校准文件。</li>
+</ul>
+</li>
+</ul>
+<p>完成。</p>
+<p>当程序完成后：</p>
+<ol>
+<li>删除“training”文件夹中之前复制过来的所有校准文件</li>
+<li>重命名“training”文件夹中新生成的校准文件并命名为“alignment.fsa”。</li>
+</ol>
+<p>训练集准备完毕。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/record/">record</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+
+      
+        
+	<div id="comment">
+	
+	<!-- gitalk start -->
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<div id="gitalk-container"></div>
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		var gitalk = new Gitalk({
+			clientID: '6a3bfced9fed2761536e',
+			clientSecret: '4771b2b0583e0359a1e2af05d70721a77fbcdc66',
+			id: window.location.pathname,
+			repo: 'PageHexoComments',
+			owner: 'jiangfengringo',
+			admin: 'jiangfengringo',
+			perPage: 10,
+			createIssueManually: false,
+			distractionFreeMode: true
+		})
+		gitalk.render('gitalk-container')
+	</script>
+    </script>
+	<!-- gitalk end -->
+	
+	</div>
+	
+<link rel="stylesheet" href="/css/comment.css">
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/04/faceswap%E8%AE%AD%E7%BB%83/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          faceswap训练
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/28/faceswap%E5%AE%89%E8%A3%85%E6%8C%87%E5%AF%BC/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">faceswap安装指导</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#内容："><span class="nav-number">1.</span> <span class="nav-text">内容：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍"><span class="nav-number">2.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要提取？"><span class="nav-number">3.</span> <span class="nav-text">为什么要提取？</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#校准文件"><span class="nav-number">3.1.</span> <span class="nav-text">校准文件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提取"><span class="nav-number">4.</span> <span class="nav-text">提取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类"><span class="nav-number">5.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#清理校准文件"><span class="nav-number">6.</span> <span class="nav-text">清理校准文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#手动修正校准"><span class="nav-number">7.</span> <span class="nav-text">手动修正校准</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#启动手动工具"><span class="nav-number">7.1.</span> <span class="nav-text">启动手动工具</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#为转换进行手动修正"><span class="nav-number">7.2.</span> <span class="nav-text">为转换进行手动修正</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#为训练集进行手动修正"><span class="nav-number">7.3.</span> <span class="nav-text">为训练集进行手动修正</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从校准文件中提取训练集"><span class="nav-number">8.</span> <span class="nav-text">从校准文件中提取训练集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#合并人脸数据集进行训练"><span class="nav-number">9.</span> <span class="nav-text">合并人脸数据集进行训练</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2020 IKEOVE All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              This site has been load by <span id="busuanzi_value_site_uv"></span> person,  
+              The total number of visits is <span id="busuanzi_value_site_pv"></span>.
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

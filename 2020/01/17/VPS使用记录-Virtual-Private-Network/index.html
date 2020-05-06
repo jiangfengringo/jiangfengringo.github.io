@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>VPS使用记录-Virtual Private Network | IKEOVE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="tool" />
+  
+  
+  
+  
+  <meta name="description" content="18年之后，lantern和psiphon基本上就处于瘫痪状态，偶尔回光返照，恰好听朋友推荐搬瓦工，所以花点时间鼓捣了一下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VPS使用记录-Virtual Private Network">
+<meta property="og:url" content="http://yoursite.com/2020/01/17/VPS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-Virtual-Private-Network/">
+<meta property="og:site_name" content="IKEOVE">
+<meta property="og:description" content="18年之后，lantern和psiphon基本上就处于瘫痪状态，偶尔回光返照，恰好听朋友推荐搬瓦工，所以花点时间鼓捣了一下。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-17T13:00:00.000Z">
+<meta property="article:modified_time" content="2020-01-17T13:00:00.000Z">
+<meta property="article:author" content="Ringo Hu">
+<meta property="article:tag" content="tool">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="IKEOVE" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="IKEOVE" rel="home"> IKEOVE </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Like LiKe, Like like LIKE</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-VPS使用记录-Virtual-Private-Network" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      VPS使用记录-Virtual Private Network
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/01/17/VPS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-Virtual-Private-Network/" class="article-date">
+	  <time datetime="2020-01-17T13:00:00.000Z" itemprop="datePublished">January 17, 2020</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  This post has been read by<span id="busuanzi_value_page_pv"></span> person
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>18年之后，lantern和psiphon基本上就处于瘫痪状态，偶尔回光返照，恰好听朋友推荐搬瓦工，所以花点时间鼓捣了一下。</p>
+<a id="more"></a>
+<p>一开始是买了个KVM，配置丐版，服务三无，但是遭不住便宜，找了个L2TP/IPSEC配置脚本直接就上手了，</p>
+<p><code>wget –no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/l2tp.sh</code></p>
+<p>使用后的体验就像，下午八点半的移动宽带，绿皮火车哐叱哐叱，而且时常掉线，当时还考虑是美机不稳定，换成港机也并无好转，查了些信息才发现，14年GWF就针对L2TP做了特别照顾，没被Q估计还得感谢为验证机器正常运行而随手发布的apache页面，亦或者是连接时间不长懒得管。</p>
+<p>后续了解了一些与之相关的一些协议，做了一下梳理：</p>
+<table>
+<thead>
+<tr>
+<th align="center">加密协议</th>
+<th align="center">优势</th>
+<th align="center">缺点</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">PPTP（不推荐）</td>
+<td align="center">全平台，易于安装，计算量小速度快</td>
+<td align="center">非常不安全，已被NSA破解，易于封锁</td>
+<td align="center">本身只是通讯协议，数据安全性由其他验证方式提供，要求TCP端口1723和GRE协议</td>
+</tr>
+<tr>
+<td align="center">L2TP（不苛求数据绝对安全的情况下可用，也推荐那些不支持OpenVPN的传统设备）</td>
+<td align="center">通常被视为安全，易于安装，所有现代平台可用，比OpenVPN更快，能对抗严格防火墙</td>
+<td align="center">可能已被NSA破解，似乎被NSA刻意削弱，经常执行错误</td>
+<td align="center">协议本身不提供加密，而是使用IPsec验证套件协助，且只能用部分端口，所以面对NAT防火墙会容易被封锁，L2TP/IPsec压缩数据两次，但是用内核加解密且支持多线程，所以理论上快于OpenVPN，PSKs只用来授权连接，加密则用其他例如AES</td>
+</tr>
+<tr>
+<td align="center">SSTP（微软垄断，不推荐使用）</td>
+<td align="center">非常安全，windows完全整合，微软支持，能越过大多数防火墙</td>
+<td align="center">微软完全拥有专利标准</td>
+<td align="center">使用SSL3.0的加密方式，可以使用TCP端口443，在windows平台上最稳定</td>
+</tr>
+<tr>
+<td align="center">IKEv2（针对移动设备比OpneVPN更合适）</td>
+<td align="center">快，稳定，特别当网络切换或重连时，安全（只要使用AES），容易安装（至少在用户端），支持黑莓设备</td>
+<td align="center">许多平台不支持，服务器端安装很麻烦，容易导致一些潜在的问题，只有开源实现才是可信的</td>
+<td align="center">早期由微软和思科共同开发，支持windows7+，黑莓，IOS设备，但要小心微软开发的东西，所以只有支持Linux和其他操作系统的独立开发兼容版本的IKEv2才是值得信任的，IKEv2时IPsec协议套件的一部分，通过处理SA来保证流量安全，适用于移动设备。比L2TP更优秀。</td>
+</tr>
+<tr>
+<td align="center">OpenVPN（推荐使用，综合考量下最好）</td>
+<td align="center">非常安全（只要使用PFS），高度可配置，开源，能越过防火墙</td>
+<td align="center">需要第三方软件</td>
+<td align="center">使用OPENSSL库和TLS协议，可在任意端口运行，包括TCP端口443，最好是在UDP端口运行，可以使用OPENSSL库提供加密支持，OpenVPN加密包含两部分，数据频道加密和控制频道加密，保护数据安全和连接安全。</td>
+</tr>
+</tbody></table>
+<p><a href="https://proprivacy.com/vpn/guides/vpn-encryption-the-complete-guide#" target="_blank" rel="noopener">原文链接</a></p>
+<p>正当我准备换IKEv2试一下的时候，VPS老板跑路了……</p>
+<p>于是换了另外一家，可惜是OpenVZ架构，Virtual Private Network似乎是玩不成了，下一步，部署SSR试试。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/creature/">creature</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+
+      
+        
+	<div id="comment">
+	
+	<!-- gitalk start -->
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<div id="gitalk-container"></div>
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		var gitalk = new Gitalk({
+			clientID: '6a3bfced9fed2761536e',
+			clientSecret: '4771b2b0583e0359a1e2af05d70721a77fbcdc66',
+			id: window.location.pathname,
+			repo: 'PageHexoComments',
+			owner: 'jiangfengringo',
+			admin: 'jiangfengringo',
+			perPage: 10,
+			createIssueManually: false,
+			distractionFreeMode: true
+		})
+		gitalk.render('gitalk-container')
+	</script>
+    </script>
+	<!-- gitalk end -->
+	
+	</div>
+	
+<link rel="stylesheet" href="/css/comment.css">
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/24/VPS%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95-SSR/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          VPS使用记录-SSR
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/15/Airport-summary/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Airport summary</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav">None</ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2020 IKEOVE All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              This site has been load by <span id="busuanzi_value_site_uv"></span> person,  
+              The total number of visits is <span id="busuanzi_value_site_pv"></span>.
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>faceswap使用总结 | IKEOVE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="tool" />
+  
+  
+  
+  
+  <meta name="description" content="内容： 遇到的问题 关键步骤">
+<meta property="og:type" content="article">
+<meta property="og:title" content="faceswap使用总结">
+<meta property="og:url" content="http://yoursite.com/2020/04/09/faceswap%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/">
+<meta property="og:site_name" content="IKEOVE">
+<meta property="og:description" content="内容： 遇到的问题 关键步骤">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-09T12:00:00.000Z">
+<meta property="article:modified_time" content="2020-04-09T12:00:00.000Z">
+<meta property="article:author" content="Ringo Hu">
+<meta property="article:tag" content="tool">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="IKEOVE" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="IKEOVE" rel="home"> IKEOVE </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Like LiKe, Like like LIKE</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-faceswap使用总结" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      faceswap使用总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/04/09/faceswap%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" class="article-date">
+	  <time datetime="2020-04-09T12:00:00.000Z" itemprop="datePublished">April 9, 2020</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  This post has been read by<span id="busuanzi_value_page_pv"></span> person
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="内容："><a href="#内容：" class="headerlink" title="内容："></a>内容：</h4><ul>
+<li>遇到的问题</li>
+<li>关键步骤<a id="more"></a>
+
+</li>
+</ul>
+<h4 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h4><ol>
+<li>安装程序执行失败。</li>
+</ol>
+<p>下载程序实际上是分三部分下载，第一部分下载安装conda3，用以提供执行faceswap所需要的环境，这部分下载主要容易出问题的是网络速度慢，尤其在国内，解决的最好办法就是挂代理；第二部分是下载安装git，这部分我没有遇到过问题，而且git的作用也只是用来clone faceswap项目，是为第三部分服务的；第三部分就是从github clone项目文件， 这部分是我遇到最困难的部分，挂代理也不能解决，有一种方法可供参考：</p>
+<p>修改<code>C:\Windows\System32\drivers\etc\hosts</code>文件，在线查找<code>github.com</code>和<code>github.global.ssl.fastly.net</code>的IP地址，然后以<code>192.30.xx.xx github.com</code>的形式添加进hosts，接着使用<code>ipconfig /flushdns</code>刷新。由于IP地址时常更改，所以需要用时即时查找添加。</p>
+<p>但这一方法也不总是有用，不排除是我的网络问题，后来在挂代理加修改hosts的双重作用下，且在深夜开始安装，第二天安装成功的可能性很高，这是我目前得到的最好办法了。</p>
+<p>如还是一直失败，那么就需要考虑手动安装了，即先安装conda3，然后clone faceswap项目，再手动为faceswap创建conda3环境及安装依赖包，这一步就需要参考installer的源码来操作了。</p>
+<p>实际上只要installer出现安装完成的提示，尽管日志中有一些错误，也是可以手动修复的。点击启动快捷方式，如果失败可根据启动日志来定位问题。如果是依赖包的问题可通过anaconda3命令面板手动安装；如果是Faceswap项目出错可独立clone一份下来，然后保留installer下载的faceswap项目文件夹中的启动文件faceswap_win_launcher.bat（实际上也可以自己写），其余的全部用独立clone下来的资源替代。</p>
+<p>独立clone注意修改gitconfig中http的<code>postBuffer = 524288000</code>和<code>sslVerify = false</code>配置，项目实在太大，而国内网络环境又太差。</p>
+<p>使用amd的用户可能会遇到启动失败的问题。可打开conda3命令面板，使用<code>conda activate faceswap</code>命令，激活faceswap环境，接着使用命令<code>plaidml-setup</code>，安装plaindml，注意选择正确的GPU（注意先要将显卡驱动更新一下）。</p>
+<p>以上，就是从安装到开启面板中所遇到的问题。</p>
+<ol start="2">
+<li>开启faceswap面板后，执行时出现错误。</li>
+</ol>
+<p>常见的错误可以通过日志查看原因，提示会告诉你大致的解决方向。</p>
+<p>初次使用探测器，校准器，面罩等工具时需要下载资源包，这里需要挂代理，否则大概率失败。</p>
+<p>我还遇到过无法检查更新的问题，排除网络原因后我手动pull了独立faceswap项目，然后替代了原有的就能解决。</p>
+<p>除此之外还遇到过资源耗尽，文件不存在，图像尺寸不对等问题，这需要根据你自己的资源来采取行动。</p>
+<h4 id="关键步骤："><a href="#关键步骤：" class="headerlink" title="关键步骤："></a>关键步骤：</h4><p>实际上提取，训练，转换三部分，即联系又独立。联系是因为三者有明显的前后递进关系，独立则在于并不一定要求执行完前者才能进行后者，只要资源足够，三者可独立执行。</p>
+<p>想要有一个好的转换结果，最重要的是拥有不同角度，不同光照，不同表情下的人脸图片，这是决定一切的关键。如何获取就是社会工程学的问题了。</p>
+<p>注意，我有几个称呼对应：</p>
+<p><code>图片&lt;-&gt;frame</code>，即原始的照片或视频，这部分来源广泛，要求只有脸部区域尺寸应大于64*64px，其余没有任何限制。</p>
+<p><code>人脸图像&lt;-&gt;face</code>，即图片经过提取（extract）后生成的正方形人脸图像，人脸图像只在训练阶段有用。</p>
+<p><code>校准文件&lt;-&gt;alignment</code>，这个文件是作用在图片（frame）而不是人脸图像（face）上的，用于在图片上标出人脸的位置。</p>
+<p><code>面罩&lt;-&gt;mask</code>，这是包含在校准文件中却能对人脸图像起作用的标识，你可以将之视为调味品，有的话会更加鲜美，没有也不是不行。</p>
+<p>提取阶段只需要大量的图片，论坛上要求图片数量为1000-10000之间，这里指的是可用的图片，重复，脸部模糊或太小都不能计算在内。有了图片后，提取就能生成人脸图像和校准文件。或许你还可以手动修正校准或合并多个校准，关于这部分的详细请参阅提取篇。</p>
+<p>而在训练阶段，你需要的是人脸图像，只有在提取的过程中使用了面罩或warp to landmarks时，包含了这些信息的校准文件才有作用，也就是说，在训练过程中，主体是人脸图像，以及包含在校准文件中的面罩或warp to landmarks信息，而对于校准文件本身并不需要。顺带一提的是，面罩的使用好坏需要自己对照判断，而warp to landmarks我压根就没找到这个选项，不知道是不是移除了。训练阶段最终生成的是包含用于两张人脸的编码解码器，这是最需要花费时间的过程了，基本上是以天或周为计量单位的。</p>
+<p>转换阶段你需要输入的就是你最终需要换脸的图片或视频了，譬如如果你需要更换一张图片中的人脸，那就输入图片；如果你需要更换一段视频中的人脸，那就输入视频。同时你还需要这张图片或视频的校准文件，考虑一下在此过程中校准文件里起作用的是哪一些信息呢？</p>
+<p>转换过程中，始终是将训练模型中的人脸B用于替代输入资源中的人脸。模型是转换的关键，而模型的关键在于用于训练的人脸图像，追根溯源，拥有充足资源的人脸图片才是效果好坏的根本因素。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/creature/">creature</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+
+      
+        
+	<div id="comment">
+	
+	<!-- gitalk start -->
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<div id="gitalk-container"></div>
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		var gitalk = new Gitalk({
+			clientID: '6a3bfced9fed2761536e',
+			clientSecret: '4771b2b0583e0359a1e2af05d70721a77fbcdc66',
+			id: window.location.pathname,
+			repo: 'PageHexoComments',
+			owner: 'jiangfengringo',
+			admin: 'jiangfengringo',
+			perPage: 10,
+			createIssueManually: false,
+			distractionFreeMode: true
+		})
+		gitalk.render('gitalk-container')
+	</script>
+    </script>
+	<!-- gitalk end -->
+	
+	</div>
+	
+<link rel="stylesheet" href="/css/comment.css">
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/25/3%E5%B7%9E%E6%94%BE%E6%9D%BE%E5%B0%81%E7%A6%81%EF%BC%8C%E5%85%A8%E7%BE%8ECOVID-19%E6%AD%BB%E4%BA%A1%E4%BA%BA%E6%95%B0%E5%B7%B2%E8%B6%8550000/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          3州放松封禁，全美COVID-19死亡人数已超50000
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/07/%E7%97%85%E6%AF%92%E8%87%B4%E6%AD%BB%E5%8C%BA%E5%9F%9F%E5%87%8F%E7%BC%93%EF%BC%8C%E4%BD%86%E8%8B%B1%E5%9B%BD%E9%A6%96%E7%9B%B8%E6%AF%8F%E5%86%B5%E6%84%88%E4%B8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">病毒致死区域减缓，但英国首相每况愈下</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#内容："><span class="nav-number">1.</span> <span class="nav-text">内容：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遇到的问题："><span class="nav-number">2.</span> <span class="nav-text">遇到的问题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关键步骤："><span class="nav-number">3.</span> <span class="nav-text">关键步骤：</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2020 IKEOVE All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              This site has been load by <span id="busuanzi_value_site_uv"></span> person,  
+              The total number of visits is <span id="busuanzi_value_site_pv"></span>.
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
