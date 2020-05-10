@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hexo使用记录 | IKEOVE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="tool" />
+  
+  
+  
+  
+  <meta name="description" content="之前一直将个人主页用Wordpress搭在自己的VPS上，但由于该VPS服务商规模比较小，线路不稳定而且还担心跑路。想着个人站点这种需要长久维护的项目还是需要放置在一个比较稳定的地方的，因此就转移到了Github Page。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo使用记录">
+<meta property="og:url" content="https://ikeove.cn/2020/05/07/hexo%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/">
+<meta property="og:site_name" content="IKEOVE">
+<meta property="og:description" content="之前一直将个人主页用Wordpress搭在自己的VPS上，但由于该VPS服务商规模比较小，线路不稳定而且还担心跑路。想着个人站点这种需要长久维护的项目还是需要放置在一个比较稳定的地方的，因此就转移到了Github Page。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-07T12:00:00.000Z">
+<meta property="article:modified_time" content="2020-05-07T12:00:00.000Z">
+<meta property="article:author" content="Ringo Hu">
+<meta property="article:tag" content="tool">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="IKEOVE" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="IKEOVE" rel="home"> IKEOVE </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Like LiKe, Like like LIKE</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-hexo使用记录" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      hexo使用记录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2020/05/07/hexo%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" class="article-date">
+	  <time datetime="2020-05-07T12:00:00.000Z" itemprop="datePublished">May 7, 2020</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  This post has been read by<span id="busuanzi_value_page_pv"></span> person
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前一直将个人主页用Wordpress搭在自己的VPS上，但由于该VPS服务商规模比较小，线路不稳定而且还担心跑路。想着个人站点这种需要长久维护的项目还是需要放置在一个比较稳定的地方的，因此就转移到了Github Page。</p>
+<a id="more"></a>
+<p>用流行的<a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">hexo项目</a> 作为网站框架，由于Github Page只能解析静态文件并渲染成页面，因此在推送到Github Page项目之前本地需要有一个转化的过程（即hexo g）。</p>
+<p>下载安装node.js之后（注意勾选安装选项中的npm工具），即可使用包管理工具npm来安装hexo框架了，可在任意位置使用命令行执行对应命令：<code>npm install -g hexo-cli</code>，<code>-g</code>意味着全局安装。</p>
+<p>接着，在任意空文件夹下初始化一个hexo项目，<code>hexo init</code>，完成后你会看到该文件夹中出现已经构建好了的hexo项目，官方文档要求继续在该文件夹下执行<code>npm install</code>命令以安装相关的依赖包，但查看日志会发现实际在初始化的过程中就已经完成了依赖包的安装。</p>
+<p>之后，在scaffolds文件夹中设置post，page，draft框架，添加进去每一个新建的实例都需要的东西，实际上也可以保持默认，这只是为了简化后续的重复劳动。</p>
+<p>md文件中开头<code>---</code>内的数据称之为Front-matter，是用来标记该文件的一些属性，下表会对其做些说明：</p>
+<table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">作用</th>
+<th align="center">示例格式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">layout</td>
+<td align="center">表明该文本的布局</td>
+<td align="center"><code>layout: post</code></td>
+</tr>
+<tr>
+<td align="center">title</td>
+<td align="center">该文本的标题</td>
+<td align="center"><code>title: hexo使用记录</code></td>
+</tr>
+<tr>
+<td align="center">date</td>
+<td align="center">创建日期</td>
+<td align="center"><code>date: 2020-05-07 08:00:00</code></td>
+</tr>
+<tr>
+<td align="center">updated</td>
+<td align="center">更新日期</td>
+<td align="center"><code>updated: 2020-05-07 08:00:00</code></td>
+</tr>
+<tr>
+<td align="center">comments</td>
+<td align="center">能否评论</td>
+<td align="center"><code>comments: true</code></td>
+</tr>
+<tr>
+<td align="center">tags</td>
+<td align="center">标签</td>
+<td align="center"><code>tags:</code>&lt;\br&gt; <code>- tool</code></td>
+</tr>
+<tr>
+<td align="center">categories</td>
+<td align="center">分类</td>
+<td align="center"><code>categories:</code>&lt;\br&gt; <code>- [Sports, Baseball]</code> (此表明归属为Sports的子类Baseball)</td>
+</tr>
+<tr>
+<td align="center">excerpt</td>
+<td align="center">摘要</td>
+<td align="center">hexo更推荐在文本中添加<code>&lt;!-- more --&gt;</code>，此行前的文本将会被作为摘要</td>
+</tr>
+</tbody></table>
+<p>进入themes文件夹中能看到默认的landscap主题，同样也可以下载其他主题到此处，<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题</a> 。</p>
+<p>hexo项目中的<code>-config.yml</code>文件用于配置，同时主题中也存在一个<code>-config.yml</code>，这里的配置方法由于不同的设计将会各有不同，大部分的配置项其名称即表述了其功能，而另外的一些最好的理解办法就是修改后生成本地看其效果。</p>
+<p><strong>hexo项目<code>-config.yml</code></strong>：用于主题配置和Github Page仓库配置以及视频播放器的部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: hexo-theme-hipaper #使用的主题，名称与themes中的文件夹名一致</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repository: https:&#x2F;&#x2F;github.com&#x2F;jiangfengringo&#x2F;jiangfengringo.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  </span><br><span class="line">hexo-tag-dplayer: #需使用npm下载该插件</span><br><span class="line">  cdn:</span><br><span class="line">    - https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;dplayer&#x2F;dist&#x2F;DPlayer.min.js</span><br><span class="line">    - https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;dplayer&#x2F;dist&#x2F;DPlayer.min.css</span><br><span class="line">  default: </span><br><span class="line">    loop: yes</span><br><span class="line">    autoplay: false #是否开启视频自动播放，默认为 fasle</span><br><span class="line">    preload: auto #预加载模式，可选 note metadata auto </span><br><span class="line">    logo: #左上角的 Logo</span><br><span class="line">    volume: #默认音量，默认为 0.7</span><br><span class="line">    width: #播放器宽度</span><br><span class="line">    height: #播放器长度</span><br><span class="line">    hotkey: true</span><br></pre></td></tr></table></figure>
+
+<p>可以随时使用<code>hexo g</code>命令来生成静态网站，hexo项目下会生成public文件夹，并使用<code>hexo s</code>来开启本地服务器预览，如果出现问题，可使用<code>hexo clean</code>来清除生成的网站，然后再次生成。</p>
+<p>如果下载的主题中带有除<code>home</code>和<code>archive</code>外的其他标签页，那么就需要使用<code>hexo new &lt;layout&gt; &lt;name&gt;</code>先生成这些页面，注意在主题的layout文件夹中对照准确的布局名。<code>hexo new post &lt;name&gt;</code>同样用来生成文章，这会出现在hexo项目文件夹的<code>\source\_posts</code>目录下，找到同名的md文件并采用markdown标记编写它，生成前保存即可，注意文件名尽可能短，内部的title长度则无所谓。</p>
+<p>当一切合心意之后，就可以部署到GitHub Page中，注意配置好hexo项目<code>-config.yml</code>中的Deployment项，然后使用<code>npm install hexo-deployer-git --save</code>安装部署工具，再执行<code>hexo d</code>命令推送至Github Page仓库。</p>
+<p>需要使用单独域名时，先在域名服务商处添加两条记录类型为CNAME，主机记录为@和WWW，记录值为Github Page地址的解析记录，等待缓存更新后，再在Github Page的仓库设置中添加Custom domain并保存，该设置会在仓库根目录下生成一个CNAME文件。此操作需要一段时间用于Github生成https证书。</p>
+<p>这并不是一个可以详述的过程，不同于wordpress，hexo项目需要一些探索，即便是有主题和插件的存在，也需要依据不同的个性化需求来做一些嵌入和配置，而不像wordpress全程基本可视化。hexo的使用过程难免会有一些代码的配置工作，但这并不是要求先学会这些语法才能操作，项目短小和模块化即使是对于我这种几乎从未完整学习过前端的人来说也十分友好，拆开这些几十行逻辑简单的ejs文件，很容易便能得到期望的样子，当然，always backup。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/creature/">creature</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+
+      
+        
+	<div id="comment">
+	
+	<!-- gitalk start -->
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<div id="gitalk-container"></div>
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		var gitalk = new Gitalk({
+			clientID: '6a3bfced9fed2761536e',
+			clientSecret: '4771b2b0583e0359a1e2af05d70721a77fbcdc66',
+			id: location.pathname, 
+			repo: 'PageHexoComments',
+			owner: 'jiangfengringo',
+			admin: 'jiangfengringo',
+			perPage: 10,
+			createIssueManually: false,
+			distractionFreeMode: true
+		})
+		gitalk.render('gitalk-container')
+	</script>
+    </script>
+	<!-- gitalk end -->
+	
+	</div>
+	
+<link rel="stylesheet" href="/css/comment.css">
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/25/3%E5%B7%9E%E6%94%BE%E6%9D%BE%E5%B0%81%E7%A6%81%EF%BC%8C%E5%85%A8%E7%BE%8ECOVID-19%E6%AD%BB%E4%BA%A1%E4%BA%BA%E6%95%B0%E5%B7%B2%E8%B6%8550000/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">3州放松封禁，全美COVID-19死亡人数已超50000</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav">None</ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2020 IKEOVE All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              This site has been load by <span id="busuanzi_value_site_uv"></span> person,  
+              The total number of visits is <span id="busuanzi_value_site_pv"></span>.
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
